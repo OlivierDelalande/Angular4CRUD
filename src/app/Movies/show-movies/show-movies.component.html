@@ -1,0 +1,1 @@
+<h3>movies</h3><div><input [(ngModel)]="searchValue"/><p *ngFor="let allmovie of (allmovies | async) | showFilteredMovies:searchValue"><a [routerLink]="['/movies/details/', allmovie.$key]">{{ allmovie.title }}</a></p></div>
