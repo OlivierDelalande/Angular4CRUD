@@ -1,0 +1,71 @@
+//
+   Created by olivier on 03/07/2017.
+
+h3 movie details
+button((click)='deleteMovie()').button.success.medium DELETE
+button((click)='updateMovie()').button.success.medium UPDATE
+
+//div
+//  table(*ngIf = "moviedetails")
+//    tr.row.align-center
+//      td.column.small-3 title
+//      td.column.small-6 {{ moviedetails.title }}
+//    tr.row.align-center
+//      td.column.small-3 category
+//      td.column.small-6 {{ moviedetails.category }}
+//    tr.row.align-center
+//      td.column.small-3 release Year
+//      td.column.small-6 {{ moviedetails.releaseYear }}
+//    tr.row.align-center
+//      td.column.small-3 directors
+//      td.column.small-6 {{ moviedetails.directors }}
+//    tr.row.align-center
+//      td.column.small-3 actors
+//      td.column.small-6 {{ moviedetails.actors }}
+//    tr.row.align-center
+//      td.column.small-3 synopsis
+//      td.column.small-6 {{ moviedetails.synopsis }}
+//    tr.row.align-center
+//      td.column.small-3 last View Date
+//      td.column.small-6 {{ moviedetails.lastViewDate}}
+//    tr.row.align-center
+//      td.column.small-3 poster
+//      td.column.small-6 {{ moviedetails.poster }}
+//    tr.row.align-center
+//      td.column.small-3 price
+//      td.column.small-6 {{ moviedetails.price }}
+//    tr.row.align-center
+//      td.column.small-3 rate
+//      td.column.small-6 {{ moviedetails.rate }}
+div
+  table
+    tr.row.align-center
+      td.column.small-3 title
+      td.column.small-6 {{ (moviedetails | async)?.title }}
+    tr.row.align-center
+      td.column.small-3 category
+      td.column.small-6 {{ (moviedetails | async)?.category }}
+    tr.row.align-center
+      td.column.small-3 release Year
+      td.column.small-6 {{ (moviedetails | async)?.releaseYear }}
+    tr.row.align-center
+      td.column.small-3 directors
+      td.column.small-6 {{ (moviedetails | async)?.directors }}
+    tr.row.align-center
+      td.column.small-3 actors
+      td.column.small-6 {{ (moviedetails | async)?.actors }}
+    tr.row.align-center
+      td.column.small-3 synopsis
+      td.column.small-6 {{ (moviedetails | async)?.synopsis }}
+    tr.row.align-center
+      td.column.small-3 last View Date
+      td.column.small-6 {{ (moviedetails | async)?.lastViewDate}}
+    tr.row.align-center
+      td.column.small-3 poster
+      td.column.small-6 {{ (moviedetails | async)?.poster }}
+    tr.row.align-center
+      td.column.small-3 price
+      td.column.small-6 {{ (moviedetails | async)?.price }}
+    tr.row.align-center
+      td.column.small-3 rate
+      td.column.small-6 {{ (moviedetails | async)?.rate }}
