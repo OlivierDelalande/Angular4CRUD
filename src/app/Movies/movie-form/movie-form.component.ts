@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-import {MovieFormService} from "./movie-form.service";
 import {Movie} from "../movies.model";
 import {Router} from "@angular/router";
 import {MoviesService} from "../../Services/movies.service";
@@ -32,8 +31,6 @@ export class MovieFormComponent implements OnInit {
               protected fb: FormBuilder,
               protected router: Router) {
   }
-
-
 
   ngOnInit() {
     this.moviescreationform = this.fb.group({

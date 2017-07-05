@@ -4,14 +4,12 @@ import {AngularFireDatabase, FirebaseListObservable} from "angularfire2/database
 @Injectable()
 export class MoviesService {
 
-  private items: FirebaseListObservable<any>;
+  constructor(private db: AngularFireDatabase) {
 
-  constructor(db: AngularFireDatabase) {
-    this.items = db.list('/movies');
   }
 
-  get() {
-    return this.items
+  get() : FirebaseListObservable<any> {
+    return this.db.list('/movies');
   }
 
 }

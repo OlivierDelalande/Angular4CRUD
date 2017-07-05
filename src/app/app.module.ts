@@ -3,9 +3,6 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
-// import { AngularFireModule } from 'angularfire2';
-// import { AngularFireDatabaseModule } from 'angularfire2/database';
-// import { environment } from '../environments/environment';
 import { RouterModule } from '@angular/router';
 
 import {Page1Module} from "./page1/page1.module";
@@ -18,12 +15,9 @@ import {GeneralcomponentsModule} from "./generalcomponents/generalcomponents.mod
 import {appRoutes} from "./app.routes";
 import {DefaultrouteModule} from "./defaultroute/defaultroute.module";
 import {MovieFormModule} from "./Movies/movie-form/movie-form.module";
-import {MovieFormComponent} from "./Movies/movie-form/movie-form.component";
-import {ShowMoviesComponent} from "./Movies/show-movies/show-movies.component";
 import {ShowMoviesModule} from "./Movies/show-movies/show-movies.module";
-import { ShowMoviesPipe } from './Pipe/show-movies.pipe';
 import {MovieDetailsModule} from "./Movies/movie-details/movie-details.module";
-import {UpdateMovieDetailsModule} from "./Movies/movie-details/update-movie-details/update-movie-details.module";
+import {UpdateMovieDetailsModule} from "./Movies/update-movie-details/update-movie-details.module";
 
 @NgModule({
   imports: [

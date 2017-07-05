@@ -8,7 +8,7 @@ import {DefaultrouteComponent} from "./defaultroute/defaultroute.component";
 import {MovieFormComponent} from "./Movies/movie-form/movie-form.component";
 import {ShowMoviesComponent} from "./Movies/show-movies/show-movies.component";
 import {MovieDetailsComponent} from "./Movies/movie-details/movie-details.component";
-import {UpdateMovieDetailsComponent} from "./Movies/movie-details/update-movie-details/update-movie-details.component";
+import {UpdateMovieDetailsComponent} from "./Movies/update-movie-details/update-movie-details.component";
 
 export const appRoutes: Routes = [
   { path: 'page1', component: Page1Component },

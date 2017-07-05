@@ -2,7 +2,8 @@ import {Component, OnInit} from '@angular/core';
 import {MovieDetailsService} from "./movie-details.service";
 import {ActivatedRoute, ParamMap, Router} from "@angular/router";
 import 'rxjs/add/operator/switchMap';
-import {MovieFormService} from "../movie-form/movie-form.service";
+import {MovieService} from "../../Services/movie.service";
+import {current} from "codelyzer/util/syntaxKind";
 
 
 @Component({
@@ -12,30 +13,19 @@ import {MovieFormService} from "../movie-form/movie-form.service";
 })
 export class MovieDetailsComponent implements OnInit {
 
-  // moviedetails: any;
-  // subscription: any;
   moviedetails: any;
   currentKey: string;
 
-  constructor(protected movieService: MovieDetailsService,
-              protected MovieFormService: MovieFormService,
+  constructor(protected movieService: MovieService,
               protected route: ActivatedRoute,
               protected router: Router) {
   }
 
   ngOnInit() {
-
-    // this.subscription = this.route.paramMap
-    //   .switchMap((params: ParamMap) =>
-    //     this.movieService.get(params.get('id')))
-    //   .subscribe((value) => {
-    //     console.log('AAA', value);
-    //     this.moviedetails = value;
-    //   });
-
     this.moviedetails = this.route.paramMap
       .switchMap((params: ParamMap) => {
         this.currentKey = params.get('id');
+        console.log(this.currentKey);
         return this.movieService.get(params.get('id'))
     });
   }
@@ -49,15 +39,25 @@ export class MovieDetailsComponent implements OnInit {
   updateMovie () {
     console.log('update');
     this.router.navigate([`/movies/update/${this.currentKey}`]);
+    this.movieService.updateMovie();
   }
 
 
-
-  // ngOnDestroy() {
-  //   // this.subscription.unsubscribe();
-  // }
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // (aze) => console.log(aze);
 // (aze) => {

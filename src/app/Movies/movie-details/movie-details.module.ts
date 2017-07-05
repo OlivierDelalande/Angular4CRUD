@@ -6,6 +6,7 @@ import {environment} from "../../../environments/environment";
 import {AngularFireDatabaseModule} from "angularfire2/database";
 import {MovieDetailsService} from "./movie-details.service";
 import {RouterModule} from "@angular/router";
+import {MovieService} from "../../Services/movie.service";
 
 
 
@@ -18,7 +19,7 @@ import {RouterModule} from "@angular/router";
   ],
   declarations: [MovieDetailsComponent],
   providers: [
-    MovieDetailsService
+    MovieService
   ],
   exports: [MovieDetailsComponent]
 })
